@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script type="text/template" id="item-template">
+        <div class="view">
+            <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
+            <label><%- title %></label>
+            <a class="destroy"></a>
+        </div>
+        <input class="edit" type="text" value="<%- title %>" />
+    </script>
+
+    <script type="text/template" id="stats-template">
+        <% if (done) { %>
+        <a id="clear-completed">Clear <%= done %> completed <%= done == 1 ? 'item' : 'items' %></a>
+        <% } %>
+        <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %> left</div>
+    </script>
+</head>
+<body>
+<div id="todoapp">
+    <header>
+        <h1></h1>
+        <input id="new-todo" type="text" placeholder="What needs to be done?"/>
+    </header>
+
+    <section id="main" style="display: block;">
+        <input id="toggle-all" type="checkbox"/>
+        <label for="toggle-all">Mark all as complete</label>
+        <ul id="todo-list"></ul>
+    </section>
+
+    <footer style="display: block;">
+        <div class="todo-count"><b>2</b> items left</div>
+    </footer>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+<script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.9/backbone.localStorage-min.js"></script>
+
+
+<script type="text/javascript" src="todo.js"></script>
+</body>
