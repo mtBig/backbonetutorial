@@ -1,0 +1,6 @@
+var appItemTpl = '\
+             <a href="#foods/<%=name%>" target="_blank">\
+            <%=name%>\
+            </a>&nbsp;<a class="add-to-cart" href="#">buy</a>\
+            ';
+

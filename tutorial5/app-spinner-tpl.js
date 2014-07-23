@@ -1,0 +1,1 @@
+var spinnerTpl = '<img src="img/ajax-loader.gif"/>';
