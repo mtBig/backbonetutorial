@@ -2,5 +2,8 @@ backbonetutorial
 ================
 backbone기본학습
 
-slip study 예제
-        http://www.slipp.net/wiki/pages/viewpage.action?pageId=19530136
+tutorial1 라우터 기본 이해
+tutorial2 뷰 추가
+tutorial3 이벤트바인딩
+tutorial4 subView생성
+tutorial5 backbone 각 요소 분리
